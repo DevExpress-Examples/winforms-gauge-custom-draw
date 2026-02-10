@@ -54,7 +54,7 @@ Namespace XtraGauges_CustomDraw
         Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs)
             timer = New Timer()
             timer.Interval = 150
-            AddHandler timer.Tick, New EventHandler(AddressOf OnTimerTick)
+            timer.Tick += New EventHandler(AddressOf OnTimerTick)
             timer.Start()
         End Sub
 
@@ -66,7 +66,7 @@ Namespace XtraGauges_CustomDraw
         End Sub
 
         Private Function AnimateScaleValue(ByVal scale As IBaseScale, ByVal factor As Single) As Single
-            Dim random As Random = New Random(Date.Now.Millisecond)
+            Dim random As Random = New Random(DateTime.Now.Millisecond)
             Dim deviation As Single =(CSng(random.NextDouble()) - scale.Percent)
             Return scale.Value + scale.ScaleLength * factor * deviation
         End Function

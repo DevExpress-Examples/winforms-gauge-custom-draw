@@ -61,7 +61,7 @@ Namespace XtraGauges_CustomDraw
             Me.arcScaleBackgroundLayerComponent1.Name = "bg1"
             Me.arcScaleBackgroundLayerComponent1.ShapeType = DevExpress.XtraGauges.Core.Model.BackgroundLayerShapeType.CircularFull_Style1
             Me.arcScaleBackgroundLayerComponent1.ZOrder = 1000
-            AddHandler Me.arcScaleBackgroundLayerComponent1.CustomDrawElement, New DevExpress.XtraGauges.Core.Primitive.CustomDrawElementEventHandler(AddressOf Me.arcScaleBackgroundLayerComponent1_CustomDrawElement)
+            Me.arcScaleBackgroundLayerComponent1.CustomDrawElement += New DevExpress.XtraGauges.Core.Primitive.CustomDrawElementEventHandler(AddressOf Me.arcScaleBackgroundLayerComponent1_CustomDrawElement)
             ' 
             ' arcScaleComponent1
             ' 
@@ -80,7 +80,7 @@ Namespace XtraGauges_CustomDraw
             Me.arcScaleComponent1.RadiusY = 83F
             Me.arcScaleComponent1.StartAngle = -240F
             Me.arcScaleComponent1.Value = 40F
-            AddHandler Me.arcScaleComponent1.CustomDrawElement, New DevExpress.XtraGauges.Core.Primitive.CustomDrawElementEventHandler(AddressOf Me.arcScaleComponent1_CustomDrawElement)
+            Me.arcScaleComponent1.CustomDrawElement += New DevExpress.XtraGauges.Core.Primitive.CustomDrawElementEventHandler(AddressOf Me.arcScaleComponent1_CustomDrawElement)
             ' 
             ' arcScaleNeedleComponent1
             ' 
@@ -90,7 +90,7 @@ Namespace XtraGauges_CustomDraw
             Me.arcScaleNeedleComponent1.ShapeType = DevExpress.XtraGauges.Core.Model.NeedleShapeType.CircularFull_Style7
             Me.arcScaleNeedleComponent1.StartOffset = -21F
             Me.arcScaleNeedleComponent1.ZOrder = -50
-            AddHandler Me.arcScaleNeedleComponent1.CustomDrawElement, New DevExpress.XtraGauges.Core.Primitive.CustomDrawElementEventHandler(AddressOf Me.arcScaleNeedleComponent1_CustomDrawElement)
+            Me.arcScaleNeedleComponent1.CustomDrawElement += New DevExpress.XtraGauges.Core.Primitive.CustomDrawElementEventHandler(AddressOf Me.arcScaleNeedleComponent1_CustomDrawElement)
             ' 
             ' checkEdit1
             ' 
@@ -99,7 +99,7 @@ Namespace XtraGauges_CustomDraw
             Me.checkEdit1.Properties.Caption = "Handle CustomDraw event"
             Me.checkEdit1.Size = New System.Drawing.Size(157, 19)
             Me.checkEdit1.TabIndex = 1
-            AddHandler Me.checkEdit1.CheckStateChanged, New System.EventHandler(AddressOf Me.checkEdit1_CheckStateChanged)
+            Me.checkEdit1.CheckStateChanged += New System.EventHandler(AddressOf Me.checkEdit1_CheckStateChanged)
             ' 
             ' Form1
             ' 
@@ -110,7 +110,7 @@ Namespace XtraGauges_CustomDraw
             Me.Controls.Add(Me.gaugeControl1)
             Me.Name = "Form1"
             Me.Text = "Form1"
-            AddHandler Me.Load, New System.EventHandler(AddressOf Me.Form1_Load)
+            Me.Load += New System.EventHandler(AddressOf Me.Form1_Load)
             CType((Me.circularGauge1), System.ComponentModel.ISupportInitialize).EndInit()
             CType((Me.arcScaleBackgroundLayerComponent1), System.ComponentModel.ISupportInitialize).EndInit()
             CType((Me.arcScaleComponent1), System.ComponentModel.ISupportInitialize).EndInit()
