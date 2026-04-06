@@ -18,7 +18,7 @@ This example handles the [CustomDrawElement](https://docs.devexpress.com/CoreLib
 
 ## Files to Review
 
-* [Form1.cs](./CS/XtraGauges_CustomDraw/Form1.cs) (VB: [Form1.vb](./VB/XtraGauges_CustomDraw/Form1.vb))
+* [Form1.cs](./CS/XtraGauges_CustomDraw/Form1.cs)
 <!-- feedback -->
 ## Does This Example Address Your Development Requirements/Objectives?
 
